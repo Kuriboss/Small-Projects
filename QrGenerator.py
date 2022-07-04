@@ -1,4 +1,4 @@
-import qrcode,qrtools,pyqrcode
+import qrcode
 
 choice=int(input('Which QRcode do you want to generate? Enter 1 for websiteQR or 2 for imageQR: '))
 if(choice==1):
@@ -15,10 +15,3 @@ elif(choice==2):
     qr.make()
     img = qr.make_image()
     img.save(f'{imname}.png', 'png')
-    
-
-
-
-qr=qrtools.QR()
-qr.decode(imname)
-print(qr.data)
